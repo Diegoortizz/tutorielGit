@@ -28,6 +28,7 @@ public class Application extends Frame {
 				System.exit(0);
 			}
 		});
+		this.setLocationRelativeTo(null);
 	}
 
 }
