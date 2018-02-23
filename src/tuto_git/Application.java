@@ -9,21 +9,22 @@ public class Application extends Frame {
 	public static void main(String[] args) {
 		new Application();
 	}
-	
+
 	public Application() {
 		super();
-		
+
 		Moddle modl = new Moddle();
-		Controleur ctrl = new Controleur(modl); 
+		Controleur ctrl = new Controleur(modl);
 		Vue vue = new Vue();
 		modl.addObserver(vue);
 		vue.addActionListener(ctrl);
-		
+
+		this.setTitle("Fenêtre de Diégo");
 		this.add(vue);
 		this.pack();
 		this.setVisible(true);
-		this.addWindowListener(new WindowAdapter(){
-			public void windowClosing(WindowEvent we){
+		this.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent we) {
 				System.exit(0);
 			}
 		});
